@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    FXMLIceCream.fxml
+    Author: Nick De Luca
+    Date: August 7th 2020
+    Description
+    This class implements all the fxml nodes that display the gui of this app
+-->
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.collections.FXCollections?>
+
+<!--Main panel that contains all nodes in vertically with center alignment-->
+<VBox fx:id="pnlMain" alignment ="CENTER" spacing ="10"
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="delunico.IceCreamController">
+    <!--Title of App-->
+    <Label id ="lblTitle" text ="Ice Cream Inventory"/>
+    <!--Ice Cream Flavours Selection-->
+    <ComboBox fx:id ="cmbFlavours" prefWidth="150.0" >             
+        <items>
+            <!--FXCollections using an ArrayList of Strings-->
+            <FXCollections fx:factory ="observableArrayList">
+                <String fx:value ="VANILLA"/>
+                <String fx:value ="CHOCOLATE"/>
+                <String fx:value ="MANGO"/>
+                <String fx:value ="STRAWBERRY"/>
+                <String fx:value ="BUTTER_PECAN"/>
+                <String fx:value ="MOOSE"/>
+                <String fx:value ="RASPBERRY"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    
+    <!--An HBox for the price-->
+    <HBox fx:id ="pnlPrice">
+        <Label fx:id ="lblPrice" text ="Price      "/>
+        <TextField fx:id ="txfPrice" disable ="true"/>
+    </HBox>
+    
+    <!--An HBox for the quantity-->
+    <HBox fx:id ="pnlQuantity">
+        <Label fx:id ="lblQuantity" text ="Quantity"/>
+        <TextField fx:id ="txfQuantity"/>
+    </HBox>
+    
+    <TextArea fx:id ="txaDisplay" prefWidth ="300"/>
+    
+    <!--an HBox for all the buttons at the bottom of the interface-->
+    <HBox alignment ="CENTER" spacing ="5">
+        <Button fx:id ="btnSave" text ="_Save" onAction ="#InventorySystem" />
+        <Button fx:id ="btnShowInventory" text ="_Show Inventory" onAction ="#InventorySystem"/>
+        <Button fx:id ="btnReset" text ="_Reset" onAction ="#clear"/>
+        <Button fx:id ="btnExit" text ="_Exit" onAction ="#InventorySystem"/>
+    </HBox>
+     <stylesheets>
+        <URL value ="@../resources/main.css"/>
+    </stylesheets>
+</VBox>

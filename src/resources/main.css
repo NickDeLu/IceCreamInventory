@@ -1,0 +1,38 @@
+/* 
+    Created on : Aug 7, 2020, 4:23:36 PM
+    Author     : Nick De Luca
+*/
+
+/*padding for the main panel that surrounds the whole interface*/
+.pnlMainPadding{
+    -fx-padding: 30px 30px 30px 30px;
+}
+
+/*padding for nodes within the main panel*/
+.nodePadding{
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+/*label css markup that defines font size, weight, and padding*/
+.label {
+    -fx-padding: 0px 10px 0px 0px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/*id selector for the title of the interface*/
+#lblTitle{
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+/*makes red text coloring for errors*/
+.error{
+    -fx-text-fill: red;
+}
+
+/*defines the font size, and family for the text-area*/
+.text-area{
+    -fx-font-size:12;
+    -fx-font-family: monospaced;
+}
